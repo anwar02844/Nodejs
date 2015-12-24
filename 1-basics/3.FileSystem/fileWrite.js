@@ -5,7 +5,7 @@ fs.open('data.txt', 'a', function(err, data) {
   if (err) { throw err; }
 
   //Buffer new data to write to file
-  var buffer = new Buffer('My new buffer text\n');
+  var buffer = new Buffer('My new buffer text\nanwar\n');
   writeData(data, buffer);
 });
 
@@ -15,8 +15,8 @@ function writeData(data, buffer) {
     fs.write(data, buffer, 0 + written, buffer.length - written, null, function(err, bytesWritten) {
       if (err) { throw err; }
       written += bytesWritten;
-      if (written === buffer.length) {
-        return console.log('done');
+        if (written === buffer.length) {
+        return console.log('done written'+written);
       } else {
         writeData(data, buffer);
       }

@@ -3,7 +3,9 @@ var fs      = require('fs'),
     path    = require('path');
 
 console.log('Node version: ' + process.version);
+
 console.log('System info (using os): ' + os.hostname() + ' ' + os.type() + ' ' + os.arch());
+
 console.log('');
 console.log('Script directory (using __dirname): ' + __dirname);
 console.log('Script name (using __filename): ' + __filename);

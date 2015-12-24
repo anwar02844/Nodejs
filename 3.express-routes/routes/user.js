@@ -11,7 +11,7 @@ router.param('userId', function(req, res, next, id) {
 
 router.get('/:userId', function(req, res, next) {
 
-   res.render('user', { message: '', userId: req.params.userId, userName: 'John Doe' });
+   res.render('user', { message: 'Anwar messege', userId: req.params.userId, userName: 'John Doe' });
 
 });
 

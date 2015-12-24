@@ -7,13 +7,12 @@ var db = mongoose.connect('mongodb://localhost/books');
 
 var app = express();
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3001;
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 var bookRouter = require('./Routes/bookRoutes');
-
 
 app.use('/api/books', bookRouter); 
 
